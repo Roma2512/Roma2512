@@ -1,11 +1,14 @@
 name: generate animation
 
 on:
+  # Запускать автоматически каждые 24 часа
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: "0 0 * * *"
 
+  # Позволить запускать вручную из вкладки Actions
   workflow_dispatch:
 
+  # Запускать при пуше в ветку main
   push:
     branches:
       - main
